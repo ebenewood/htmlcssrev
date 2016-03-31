@@ -1,0 +1,25 @@
+a {
+	color: black;
+}
+
+a:hover {
+	color: gray;
+}
+
+.btn-blk {
+	background: black;
+	color: white;
+}
+
+.btn-blk:hover {
+	background: black;
+	color: gray;
+}
+
+.hid {
+	display: none;
+}
+
+.hidlate {
+	display: none;
+}
