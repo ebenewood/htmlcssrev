@@ -9,6 +9,7 @@ a:hover {
 .btn-blk {
 	background: black;
 	color: white;
+	font-size: .5em;
 }
 
 .btn-blk:hover {
