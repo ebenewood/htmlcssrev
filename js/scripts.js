@@ -34,10 +34,26 @@ $(function () {
 	var soundbar = document.getElementById('soundbar');
 	var sbCanvas = soundbar.getContext('2d');
 
+	var r = 1;
+	var g = 1;
+	var b = 1;
+
 	$('#soundbar').mousemove(function () {
 
-		sbCanvas.fillStyle = 'rgb('+ event.layerX + ',' + event.layerY + ',' + (event.layerX/event.layerY) + ')'
-		sbCanvas.fillRect (event.layerX, event.layerY, 3, 3);
+		sbCanvas.fillStyle =
+		'rgb('+
+		r +
+		',' +
+		g +
+		',' +
+		b
+		+ ')'
+
+		sbCanvas.fillRect (event.layerX, event.layerY, 4, 4);
+
+		r += 1;
+		g += 3;
+		b += 5;
 
 	});
 
