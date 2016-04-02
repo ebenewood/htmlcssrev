@@ -30,3 +30,11 @@ a:hover {
 	margin-right: 10%;
 	display: none;
 }
+
+#soundbar {
+	border-style: solid;
+	border-color: black;
+	margin-left: 28%;
+	margin-right: 28%;
+	margin-bottom: 10%;
+}

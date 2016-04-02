@@ -1,3 +1,4 @@
+
 var picList = [
 	'http://www.palazzodiamanti.it/pix/fuoco_86.jpg', //0
 	'http://www.palazzodiamanti.it/pix/fuoco_225.jpg',//1
@@ -11,19 +12,10 @@ var jumboList = [
 	'boxed',    //2
 	'filtered', //3
 	'bubbled',  //4
-	'feeling'  //5
+	'feeling'   //5
 ]
 
 function grow (selector) {
-
-	// var i = 0;
-	//
-	// var html =
-	// "<p style='font-size:'" +
-	// ((i + 1) * 10) +
-	// '>' +
-	// jumboList[i] +
-	// '</p>';
 
 	for (i = 0; i <= jumboList.length -1; i ++) {
 
@@ -38,6 +30,17 @@ function grow (selector) {
 };
 
 $(function () {
+
+	var soundbar = document.getElementById('soundbar');
+	var sbCanvas = soundbar.getContext('2d');
+
+	$('#soundbar').mousemove(function () {
+
+		sbCanvas.fillStyle = 'rgb('+ event.layerX + ',' + event.layerY + ',' + (event.layerX/event.layerY) + ')'
+		sbCanvas.fillRect (event.layerX, event.layerY, 3, 3);
+
+	});
+
 
 	grow($('.jumbotron'));
 
