@@ -34,11 +34,17 @@ $(function () {
 	var soundbar = document.getElementById('soundbar');
 	var sbCanvas = soundbar.getContext('2d');
 
+	var x = event.layerX;
+	var y = event.layerY;
+
 	var r = 1;
 	var g = 1;
 	var b = 1;
 
 	$('#soundbar').mousemove(function () {
+
+		var pixel = sbCanvas.getImageData(x, y, 4, 4);
+		console.log(pixel.data); /*this doesn't work*/
 
 		sbCanvas.fillStyle =
 		'rgb('+
